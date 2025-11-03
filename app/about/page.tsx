@@ -38,7 +38,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-[300px_1fr] gap-8 items-start">
             <div className="w-full aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden shadow-lg">
               <img
-                src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/Mrs-B-portrait-png copy.png"
                 alt="President"
                 className="w-full h-full object-cover"
               />
@@ -61,7 +61,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-[300px_1fr] gap-8 items-start">
             <div className="w-full aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden shadow-lg">
               <img
-                src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/Steve-SeriouseLegUp-RESIZE.png"
                 alt="Principal Floodplain Manager"
                 className="w-full h-full object-cover"
               />
