@@ -45,15 +45,15 @@ export default function AboutPage() {
             </div>
             <div>
               <h3 className="text-2xl font-bold text-[hsl(var(--ocean-blue))] mb-2">
-                Title (e.g., John Doe)
+                Denise Boehning, ANFI, CFM
               </h3>
               <p className="text-lg text-[hsl(var(--ocean-teal))] font-semibold mb-4">
-                President
+               President/CRS Program Flood Specialist & Floodplain Administrator
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Add biography and professional background here. This section should describe the President's experience,
-                expertise, and role within CoastalWide LLC. Include relevant qualifications, years of experience, and
-                specific contributions to the company and the floodplain management field.
+               Denise has been working in the Floodplain Management Industry since 2008. She uses her experience as a former Compliance Officer for an International Wholesale Bank in NYC to help communities remain compliant with the NFIP and CRS programs. As a Certified Floodplain Manager, a licensed insurance agent and an Associate in the National Flood Insurance program, Denise can provide communities a unique perspective from the insurance and the floodplain management side.
+
+When not working and taking care of her family, Denise is involved in her own community by serving on various boards and non-profit organizations.  
               </p>
             </div>
           </div>
@@ -68,15 +68,15 @@ export default function AboutPage() {
             </div>
             <div>
               <h3 className="text-2xl font-bold text-[hsl(var(--ocean-blue))] mb-2">
-                Title (e.g., Jane Smith)
+                Steve Boehning, P.E, CFM
               </h3>
               <p className="text-lg text-[hsl(var(--ocean-teal))] font-semibold mb-4">
                 Principal Floodplain Manager
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Add biography and professional background here. This section should describe the Principal Floodplain
-                Manager's credentials, certifications, and expertise in floodplain management and CRS programs. Include
-                years of experience, specialized skills, and notable achievements in the field.
+                Steve has been working as a Coastal Engineer for the past 25+ years. Steve is a known expert in coastal construction, permitting and coastal modeling. In addition to providing consulting services to CoastalWide, Steve is also managing his own coastal engineering company 'Coastal Waterways Design & Engineering'.
+
+Steve volunteers as a Commissioner for the Florida Inland Navigation District and volunteers for his local parish.
               </p>
             </div>
           </div>
