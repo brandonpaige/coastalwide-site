@@ -24,6 +24,64 @@ export default function AboutPage() {
       </section>
 
       <section className="py-16 px-4 max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-6 text-[hsl(var(--ocean-blue))]">Owners and Operators</h2>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            Family-owned and operated, CoastalWide LLC was started in 2008...(place story here)
+          </p>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto mt-4 leading-relaxed">
+            Add a description here.
+          </p>
+        </div>
+
+        <div className="max-w-5xl mx-auto space-y-12 mb-16">
+          <div className="grid md:grid-cols-[300px_1fr] gap-8 items-start">
+            <div className="w-full aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="President"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-[hsl(var(--ocean-blue))] mb-2">
+                Title (e.g., John Doe)
+              </h3>
+              <p className="text-lg text-[hsl(var(--ocean-teal))] font-semibold mb-4">
+                President
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Add biography and professional background here. This section should describe the President's experience,
+                expertise, and role within CoastalWide LLC. Include relevant qualifications, years of experience, and
+                specific contributions to the company and the floodplain management field.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-[300px_1fr] gap-8 items-start">
+            <div className="w-full aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Principal Floodplain Manager"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-[hsl(var(--ocean-blue))] mb-2">
+                Title (e.g., Jane Smith)
+              </h3>
+              <p className="text-lg text-[hsl(var(--ocean-teal))] font-semibold mb-4">
+                Principal Floodplain Manager
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Add biography and professional background here. This section should describe the Principal Floodplain
+                Manager's credentials, certifications, and expertise in floodplain management and CRS programs. Include
+                years of experience, specialized skills, and notable achievements in the field.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="text-4xl font-bold mb-6 text-[hsl(var(--ocean-blue))]">Our Mission</h2>
