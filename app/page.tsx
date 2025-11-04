@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Shield, MapPin, Waves, GraduationCap, FileText, Users, TrendingUp } from "lucide-react";
+import { ArrowRight, Shield, MapPin, Waves, GraduationCap, FileText, Users, TrendingUp, BookOpen } from "lucide-react";
 
 export default function Home() {
   return (
@@ -22,9 +22,9 @@ export default function Home() {
     </p>
     <p className="text-xl md:text-2xl text-blue-100 mb-16 drop-shadow">— Psalm 32:6</p>
 
-    <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
       <Link href="/services/crs" className="group">
-        <Card className="bg-black/40 border border-white/20 hover:border-white/40 backdrop-blur-sm transition-all duration-300 h-full">
+        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
           <CardContent className="pt-8 pb-8 px-6">
             <div className="mb-4">
               <Shield className="w-8 h-8 text-white" />
@@ -40,7 +40,7 @@ export default function Home() {
       </Link>
 
       <Link href="/services/floodplain-management" className="group">
-        <Card className="bg-black/40 border border-white/20 hover:border-white/40 backdrop-blur-sm transition-all duration-300 h-full">
+        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
           <CardContent className="pt-8 pb-8 px-6">
             <div className="mb-4">
               <MapPin className="w-8 h-8 text-white" />
@@ -56,7 +56,7 @@ export default function Home() {
       </Link>
 
       <Link href="/services/education" className="group">
-        <Card className="bg-black/40 border border-white/20 hover:border-white/40 backdrop-blur-sm transition-all duration-300 h-full">
+        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
           <CardContent className="pt-8 pb-8 px-6">
             <div className="mb-4">
               <GraduationCap className="w-8 h-8 text-white" />
@@ -66,6 +66,22 @@ export default function Home() {
             </h3>
             <p className="text-sm text-gray-300 leading-relaxed">
               Workshops and training for communities, professionals, and stakeholders.
+            </p>
+          </CardContent>
+        </Card>
+      </Link>
+
+      <Link href="/resources" className="group">
+        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
+          <CardContent className="pt-8 pb-8 px-6">
+            <div className="mb-4">
+              <BookOpen className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-lg font-bold text-white mb-2">
+              Resources
+            </h3>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              Flood insurance quoting, CRS resources, and FEMA guidance.
             </p>
           </CardContent>
         </Card>
