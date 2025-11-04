@@ -1,103 +1,115 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Shield, MapPin, Waves, GraduationCap, FileText, Users, TrendingUp, BookOpen } from "lucide-react";
+import {
+  ArrowRight,
+  Shield,
+  MapPin,
+  Waves,
+  GraduationCap,
+  FileText,
+  Users,
+  TrendingUp,
+  BookOpen,
+} from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <section className="relative min-h-[700px] flex items-center justify-center overflow-hidden">
-  <div
-    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-    style={{
-      backgroundImage: `url("/hero.png")`,
-    }}
-  />
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url("/hero.png")`,
+          }}
+        />
 
-  <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70" />
 
-  <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto py-20">
-    <p className="text-3xl md:text-5xl mb-3 text-white italic font-light drop-shadow-lg leading-relaxed">
-      "Though flood waters threaten,<br />they will never reach them"
-    </p>
-    <p className="text-xl md:text-2xl text-blue-100 mb-16 drop-shadow">— Psalm 32:6</p>
+        <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto py-20">
+          <p className="text-3xl md:text-5xl mb-3 text-white italic font-light drop-shadow-lg leading-relaxed">
+            "Though flood waters threaten,<br />they will never reach them"
+          </p>
+          <p className="text-xl md:text-2xl text-blue-100 mb-16 drop-shadow">
+            — Psalm 32:6
+          </p>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-      <Link href="/services/crs" className="group">
-        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
-          <CardContent className="pt-8 pb-8 px-6">
-            <div className="mb-4">
-              <Shield className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-lg font-bold text-white mb-2">
-              CRS Program
-            </h3>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Community Rating System consultation and class improvement strategies.
-            </p>
-          </CardContent>
-        </Card>
-      </Link>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            <Link href="/services/crs" className="group">
+              <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
+                <CardContent className="pt-4 pb-4 px-4 flex flex-col items-start"> {/* Left-aligned, reduced padding */}
+                  <div className="mb-2">
+                    <Shield className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-1"> {/* Reduced margin */}
+                    CRS Program
+                  </h3>
+                  <p className="text-sm text-gray-300 leading-tight"> {/* Tighter line height */}
+                    Community Rating System consultation and class improvement.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
 
-      <Link href="/services/floodplain-management" className="group">
-        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
-          <CardContent className="pt-8 pb-8 px-6">
-            <div className="mb-4">
-              <MapPin className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-lg font-bold text-white mb-2">
-              Floodplain Management
-            </h3>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Elevation certificates, NFIP compliance, and building code reviews.
-            </p>
-          </CardContent>
-        </Card>
-      </Link>
+            <Link href="/services/floodplain-management" className="group">
+              <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
+                <CardContent className="pt-4 pb-4 px-4 flex flex-col items-start">
+                  <div className="mb-2">
+                    <MapPin className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-1">
+                    Floodplain Management
+                  </h3>
+                  <p className="text-sm text-gray-300 leading-tight">
+                    Elevation certificates, NFIP compliance, and building code reviews.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
 
-      <Link href="/services/education" className="group">
-        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
-          <CardContent className="pt-8 pb-8 px-6">
-            <div className="mb-4">
-              <GraduationCap className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-lg font-bold text-white mb-2">
-              Education
-            </h3>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Workshops and training for communities, professionals, and stakeholders.
-            </p>
-          </CardContent>
-        </Card>
-      </Link>
+            <Link href="/services/education" className="group">
+              <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
+                <CardContent className="pt-4 pb-4 px-4 flex flex-col items-start">
+                  <div className="mb-2">
+                    <GraduationCap className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-1">
+                    Education
+                  </h3>
+                  <p className="text-sm text-gray-300 leading-tight">
+                    Workshops and training for communities, professionals, and stakeholders.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
 
-      <Link href="/resources" className="group">
-        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
-          <CardContent className="pt-8 pb-8 px-6">
-            <div className="mb-4">
-              <BookOpen className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-lg font-bold text-white mb-2">
-              Resources
-            </h3>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Flood insurance quoting, CRS resources, and FEMA guidance.
-            </p>
-          </CardContent>
-        </Card>
-      </Link>
-    </div>
-  </div>
+            <Link href="/resources" className="group">
+              <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
+                <CardContent className="pt-4 pb-4 px-4 flex flex-col items-start">
+                  <div className="mb-2">
+                    <BookOpen className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-1">
+                    Resources
+                  </h3>
+                  <p className="text-sm text-gray-300 leading-tight">
+                    Flood insurance quoting, CRS resources, and FEMA guidance.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+        </div>
 
-  <div className="absolute bottom-0 left-0 w-full">
-    <svg viewBox="0 0 1440 120" className="w-full h-auto">
-      <path
-        fill="#ffffff"
-        d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
-      />
-    </svg>
-  </div>
-</section>
+        <div className="absolute bottom-0 left-0 w-full">
+          <svg viewBox="0 0 1440 120" className="w-full h-auto">
+            <path
+              fill="#ffffff"
+              d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+            />
+          </svg>
+        </div>
+      </section>
 
       <section className="py-16 px-4 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
