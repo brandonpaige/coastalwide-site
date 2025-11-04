@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Shield, MapPin, GraduationCap, FileText, Users, TrendingUp } from "lucide-react";
+import { ArrowRight, Shield, MapPin, Waves, GraduationCap, FileText, Users, TrendingUp } from "lucide-react";
 
 export default function Home() {
   return (
@@ -40,7 +40,7 @@ export default function Home() {
         <Card className="bg-transparent hover:bg-white border-2 border-white transition-all duration-300 hover:-translate-y-1 h-full">
           <CardContent className="pt-6 pb-6">
             <div className="mb-3 flex justify-center">
-              <MapPin className="w-10 h-10 text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]" />
+              <Waves className="w-10 h-10 text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]" />
             </div>
             <h3 className="text-lg font-bold text-center text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]">
               Floodplain Management
