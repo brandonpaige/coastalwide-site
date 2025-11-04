@@ -18,7 +18,7 @@ export default function EducationPage() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-[hsl(var(--ocean-blue))]/70"></div>
+        <div className="absolute inset-0 bg-[#0070d7] opacity-33"></div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className="mb-6 flex justify-center">
             <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
