@@ -22,57 +22,42 @@ export default function Home() {
     </p>
     <p className="text-xl md:text-2xl text-blue-100 mb-16 drop-shadow">— Psalm 32:6</p>
 
-    <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+    <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
       <Link href="/services/crs" className="group">
-        <Card className="bg-white/95 hover:bg-white border-0 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full">
-          <CardContent className="pt-8 pb-8">
-            <div className="mb-4 flex justify-center">
-              <div className="w-16 h-16 bg-[hsl(var(--ocean-light))] rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-[hsl(var(--ocean-teal))] group-hover:scale-110">
-                <Shield className="w-8 h-8 text-[hsl(var(--ocean-blue))] transition-colors duration-300 group-hover:text-white" />
-              </div>
+        <Card className="bg-transparent hover:bg-white border-2 border-white transition-all duration-300 hover:-translate-y-1 h-full">
+          <CardContent className="pt-6 pb-6">
+            <div className="mb-3 flex justify-center">
+              <Shield className="w-10 h-10 text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]" />
             </div>
-            <h3 className="text-xl font-bold text-center text-[hsl(var(--ocean-blue))] mb-2 transition-colors duration-300 group-hover:text-[hsl(var(--ocean-teal))]">
+            <h3 className="text-lg font-bold text-center text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]">
               CRS Program
             </h3>
-            <p className="text-gray-600 text-center text-sm">
-              Community Rating System consultation and class improvement
-            </p>
           </CardContent>
         </Card>
       </Link>
 
       <Link href="/services/floodplain-management" className="group">
-        <Card className="bg-white/95 hover:bg-white border-0 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full">
-          <CardContent className="pt-8 pb-8">
-            <div className="mb-4 flex justify-center">
-              <div className="w-16 h-16 bg-[hsl(var(--ocean-light))] rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-[hsl(var(--ocean-teal))] group-hover:scale-110">
-                <MapPin className="w-8 h-8 text-[hsl(var(--ocean-blue))] transition-colors duration-300 group-hover:text-white" />
-              </div>
+        <Card className="bg-transparent hover:bg-white border-2 border-white transition-all duration-300 hover:-translate-y-1 h-full">
+          <CardContent className="pt-6 pb-6">
+            <div className="mb-3 flex justify-center">
+              <MapPin className="w-10 h-10 text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]" />
             </div>
-            <h3 className="text-xl font-bold text-center text-[hsl(var(--ocean-blue))] mb-2 transition-colors duration-300 group-hover:text-[hsl(var(--ocean-teal))]">
+            <h3 className="text-lg font-bold text-center text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]">
               Floodplain Management
             </h3>
-            <p className="text-gray-600 text-center text-sm">
-              Elevation certificates, NFIP and CRS compliance
-            </p>
           </CardContent>
         </Card>
       </Link>
 
       <Link href="/services/education" className="group">
-        <Card className="bg-white/95 hover:bg-white border-0 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full">
-          <CardContent className="pt-8 pb-8">
-            <div className="mb-4 flex justify-center">
-              <div className="w-16 h-16 bg-[hsl(var(--ocean-light))] rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-[hsl(var(--ocean-teal))] group-hover:scale-110">
-                <GraduationCap className="w-8 h-8 text-[hsl(var(--ocean-blue))] transition-colors duration-300 group-hover:text-white" />
-              </div>
+        <Card className="bg-transparent hover:bg-white border-2 border-white transition-all duration-300 hover:-translate-y-1 h-full">
+          <CardContent className="pt-6 pb-6">
+            <div className="mb-3 flex justify-center">
+              <GraduationCap className="w-10 h-10 text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]" />
             </div>
-            <h3 className="text-xl font-bold text-center text-[hsl(var(--ocean-blue))] mb-2 transition-colors duration-300 group-hover:text-[hsl(var(--ocean-teal))]">
+            <h3 className="text-lg font-bold text-center text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]">
               Education
             </h3>
-            <p className="text-gray-600 text-center text-sm">
-              Workshops and training for communities and professionals
-            </p>
           </CardContent>
         </Card>
       </Link>
