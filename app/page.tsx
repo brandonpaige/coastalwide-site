@@ -22,42 +22,51 @@ export default function Home() {
     </p>
     <p className="text-xl md:text-2xl text-blue-100 mb-16 drop-shadow">— Psalm 32:6</p>
 
-    <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+    <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
       <Link href="/services/crs" className="group">
-        <Card className="bg-transparent hover:bg-white border-2 border-white transition-all duration-300 hover:-translate-y-1 h-full">
-          <CardContent className="pt-6 pb-6">
-            <div className="mb-3 flex justify-center">
-              <Shield className="w-10 h-10 text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]" />
+        <Card className="bg-black/40 border border-white/20 hover:border-white/40 backdrop-blur-sm transition-all duration-300 h-full">
+          <CardContent className="pt-8 pb-8 px-6">
+            <div className="mb-4">
+              <Shield className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-lg font-bold text-center text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]">
+            <h3 className="text-lg font-bold text-white mb-2">
               CRS Program
             </h3>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              Community Rating System consultation and class improvement strategies.
+            </p>
           </CardContent>
         </Card>
       </Link>
 
       <Link href="/services/floodplain-management" className="group">
-        <Card className="bg-transparent hover:bg-white border-2 border-white transition-all duration-300 hover:-translate-y-1 h-full">
-          <CardContent className="pt-6 pb-6">
-            <div className="mb-3 flex justify-center">
-              <Waves className="w-10 h-10 text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]" />
+        <Card className="bg-black/40 border border-white/20 hover:border-white/40 backdrop-blur-sm transition-all duration-300 h-full">
+          <CardContent className="pt-8 pb-8 px-6">
+            <div className="mb-4">
+              <MapPin className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-lg font-bold text-center text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]">
+            <h3 className="text-lg font-bold text-white mb-2">
               Floodplain Management
             </h3>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              Elevation certificates, NFIP compliance, and building code reviews.
+            </p>
           </CardContent>
         </Card>
       </Link>
 
       <Link href="/services/education" className="group">
-        <Card className="bg-transparent hover:bg-white border-2 border-white transition-all duration-300 hover:-translate-y-1 h-full">
-          <CardContent className="pt-6 pb-6">
-            <div className="mb-3 flex justify-center">
-              <GraduationCap className="w-10 h-10 text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]" />
+        <Card className="bg-black/40 border border-white/20 hover:border-white/40 backdrop-blur-sm transition-all duration-300 h-full">
+          <CardContent className="pt-8 pb-8 px-6">
+            <div className="mb-4">
+              <GraduationCap className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-lg font-bold text-center text-white transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]">
+            <h3 className="text-lg font-bold text-white mb-2">
               Education
             </h3>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              Workshops and training for communities, professionals, and stakeholders.
+            </p>
           </CardContent>
         </Card>
       </Link>
