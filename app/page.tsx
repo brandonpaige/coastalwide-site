@@ -6,57 +6,79 @@ import { ArrowRight, Shield, MapPin, GraduationCap, FileText, Users, TrendingUp 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-  {/* YOUR PHOTO */}
+      <section className="relative min-h-[700px] flex items-center justify-center overflow-hidden">
   <div
     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
     style={{
-      backgroundImage: `url("/hero.png")`, // ← matches public/hero.jpg
+      backgroundImage: `url("/hero.png")`,
     }}
   />
 
-  {/* DARK GRADIENT OVERLAY (keeps text readable) */}
   <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70" />
 
-  {/* OPTIONAL: Keep the subtle pattern on top
-  <div
-    className="absolute inset-0 opacity-10"
-    style={{
-      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-    }}
-  /> */}
-
-  {/* CONTENT (unchanged) */}
-  <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-    <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg">
-      CoastalWide LLC
-    </h1>
-    <p className="text-xl md:text-2xl mb-4 text-blue-50 italic font-light drop-shadow">
-      "Though flood waters threaten, they will never reach them"
+  <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto py-20">
+    <p className="text-3xl md:text-5xl mb-3 text-white italic font-light drop-shadow-lg leading-relaxed">
+      "Though flood waters threaten,<br />they will never reach them"
     </p>
-    <p className="text-lg text-blue-100 mb-8">Psalm 32:6</p>
-    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-      <Button
-        asChild
-        size="lg"
-        className="bg-white text-[hsl(var(--ocean-blue))] hover:bg-blue-50 shadow-lg"
-      >
-        <Link href="/services">
-          Our Services <ArrowRight className="ml-2 w-5 h-5" />
-        </Link>
-      </Button>
-      <Button
-        asChild
-        size="lg"
-        variant="outline"
-        className="bg-transparent text-white border-2 border-white hover:bg-white/10"
-      >
-        <Link href="/contact">Contact Us</Link>
-      </Button>
+    <p className="text-xl md:text-2xl text-blue-100 mb-16 drop-shadow">— Psalm 32:6</p>
+
+    <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <Link href="/services/crs" className="group">
+        <Card className="bg-white/95 hover:bg-white border-0 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full">
+          <CardContent className="pt-8 pb-8">
+            <div className="mb-4 flex justify-center">
+              <div className="w-16 h-16 bg-[hsl(var(--ocean-light))] rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-[hsl(var(--ocean-teal))] group-hover:scale-110">
+                <Shield className="w-8 h-8 text-[hsl(var(--ocean-blue))] transition-colors duration-300 group-hover:text-white" />
+              </div>
+            </div>
+            <h3 className="text-xl font-bold text-center text-[hsl(var(--ocean-blue))] mb-2 transition-colors duration-300 group-hover:text-[hsl(var(--ocean-teal))]">
+              CRS Program
+            </h3>
+            <p className="text-gray-600 text-center text-sm">
+              Community Rating System consultation and class improvement
+            </p>
+          </CardContent>
+        </Card>
+      </Link>
+
+      <Link href="/services/floodplain-management" className="group">
+        <Card className="bg-white/95 hover:bg-white border-0 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full">
+          <CardContent className="pt-8 pb-8">
+            <div className="mb-4 flex justify-center">
+              <div className="w-16 h-16 bg-[hsl(var(--ocean-light))] rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-[hsl(var(--ocean-teal))] group-hover:scale-110">
+                <MapPin className="w-8 h-8 text-[hsl(var(--ocean-blue))] transition-colors duration-300 group-hover:text-white" />
+              </div>
+            </div>
+            <h3 className="text-xl font-bold text-center text-[hsl(var(--ocean-blue))] mb-2 transition-colors duration-300 group-hover:text-[hsl(var(--ocean-teal))]">
+              Floodplain Management
+            </h3>
+            <p className="text-gray-600 text-center text-sm">
+              Elevation certificates, NFIP and CRS compliance
+            </p>
+          </CardContent>
+        </Card>
+      </Link>
+
+      <Link href="/services/education" className="group">
+        <Card className="bg-white/95 hover:bg-white border-0 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full">
+          <CardContent className="pt-8 pb-8">
+            <div className="mb-4 flex justify-center">
+              <div className="w-16 h-16 bg-[hsl(var(--ocean-light))] rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-[hsl(var(--ocean-teal))] group-hover:scale-110">
+                <GraduationCap className="w-8 h-8 text-[hsl(var(--ocean-blue))] transition-colors duration-300 group-hover:text-white" />
+              </div>
+            </div>
+            <h3 className="text-xl font-bold text-center text-[hsl(var(--ocean-blue))] mb-2 transition-colors duration-300 group-hover:text-[hsl(var(--ocean-teal))]">
+              Education
+            </h3>
+            <p className="text-gray-600 text-center text-sm">
+              Workshops and training for communities and professionals
+            </p>
+          </CardContent>
+        </Card>
+      </Link>
     </div>
   </div>
 
-  {/* WAVE AT BOTTOM (unchanged) */}
   <div className="absolute bottom-0 left-0 w-full">
     <svg viewBox="0 0 1440 120" className="w-full h-auto">
       <path
