@@ -20,7 +20,7 @@ export default function CRSPage() {
         </div>
         <div
   className="absolute inset-0"
-  style={{ backgroundColor: 'rgba(5, 61, 117, 0.33)' }} // #053d75 with 33% transparency
+  style={{ backgroundColor: 'rgba(5, 61, 117, 0.44)' }} // #053d75 with 33% transparency
 />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className="mb-6 flex justify-center">
