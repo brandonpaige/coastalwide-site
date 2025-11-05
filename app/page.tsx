@@ -198,7 +198,7 @@ export default function Home() {
 
             <div className="relative h-80 rounded-lg overflow-hidden shadow-xl">
               <img
-                src="https://images.pexels.com/photos/7661590/pexels-photo-7661590.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src="/rolando-yera-CVrWChswu_w-unsplash.jpg"
                 alt="Education and training"
                 className="w-full h-full object-cover"
               />
