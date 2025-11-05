@@ -199,7 +199,7 @@ export default function Home() {
             <div className="relative h-80 rounded-lg overflow-hidden shadow-xl">
               <img
                 src="/rolando-yera-CVrWChswu_w-unsplash.jpg"
-                alt="Education and training"
+                alt="Beach Lighthouse"
                 className="w-full h-full object-cover"
               />
             </div>
