@@ -24,7 +24,10 @@ export default function Home() {
     }}
   />
 
-  <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-blue-900/60 to-blue-900/70" />
+  <div
+    className="absolute inset-0"
+    style={{ backgroundColor: 'rgba(5, 61, 117, 0.33)' }}
+  />
 
   <div className="container mx-auto px-4">
     <div className="relative z-10 text-left max-w-2xl py-20">
