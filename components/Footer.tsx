@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Twitter as X } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -75,17 +76,19 @@ export default function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm hover:text-white transition-colors block"
+                className="text-sm hover:text-white transition-colors flex items-center space-x-2"
               >
-                X
+                <X className="w-4 h-4 text-[hsl(var(--ocean-teal))]" />
+                <span>X</span>
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm hover:text-white transition-colors block"
+                className="text-sm hover:text-white transition-colors flex items-center space-x-2"
               >
-                LinkedIn
+                <Linkedin className="w-4 h-4 text-[hsl(var(--ocean-teal))]" />
+                <span>LinkedIn</span>
               </a>
             </div>
           </div>
