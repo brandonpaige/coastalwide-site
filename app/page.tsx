@@ -30,75 +30,15 @@ export default function Home() {
     <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
       CoastalWide LLC
     </h1>
-    <p className="text-xl md:text-2xl text-blue-100 mb-16 drop-shadow font-light">
+    <p className="text-xl md:text-2xl text-blue-100 mb-8 drop-shadow font-light">
       Expert Floodplain Management and CRS Solutions
     </p>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-      <Link href="/services/crs" className="group">
-        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
-          <CardContent className="pt-8 pb-8 px-6">
-            <div className="mb-4">
-              <Shield className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-lg font-bold text-white mb-2">
-              CRS Program
-            </h3>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Community Rating System consultation and class improvement strategies.
-            </p>
-          </CardContent>
-        </Card>
+    <Button asChild size="lg" className="bg-white text-[hsl(var(--ocean-blue))] hover:bg-blue-50">
+      <Link href="/services">
+        Our Services <ArrowRight className="ml-2 w-4 h-4" />
       </Link>
-
-      <Link href="/services/floodplain-management" className="group">
-        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
-          <CardContent className="pt-8 pb-8 px-6">
-            <div className="mb-4">
-              <MapPin className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-lg font-bold text-white mb-2">
-              Floodplain Management
-            </h3>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Elevation certificates, NFIP compliance, and building code reviews.
-            </p>
-          </CardContent>
-        </Card>
-      </Link>
-
-      <Link href="/services/education" className="group">
-        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
-          <CardContent className="pt-8 pb-8 px-6">
-            <div className="mb-4">
-              <GraduationCap className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-lg font-bold text-white mb-2">
-              Education
-            </h3>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Workshops and training for communities, professionals, and stakeholders.
-            </p>
-          </CardContent>
-        </Card>
-      </Link>
-
-      <Link href="/resources" className="group">
-        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
-          <CardContent className="pt-8 pb-8 px-6">
-            <div className="mb-4">
-              <BookOpen className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-lg font-bold text-white mb-2">
-              Resources
-            </h3>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Flood insurance quoting, CRS resources, and FEMA guidance.
-            </p>
-          </CardContent>
-        </Card>
-      </Link>
-    </div>
+    </Button>
   </div>
 
   <div className="absolute bottom-0 left-0 w-full">
