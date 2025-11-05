@@ -81,7 +81,7 @@ export default function CRSPage() {
           <div>
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl mb-8">
               <img
-                src="https://images.pexels.com/photos/1438761/pexels-photo-1438761.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src="/largeimage-anais-76.png"
                 alt="CRS and NFIP logos"
                 className="w-full h-full object-cover"
               />
