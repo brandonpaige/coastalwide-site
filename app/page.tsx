@@ -26,7 +26,7 @@ export default function Home() {
 
   <div
     className="absolute inset-0"
-    style={{ backgroundColor: 'rgba(5, 61, 117, 0.33)' }}
+    style={{ backgroundColor: 'rgba(5, 61, 117, 0.44)' }}
   />
 
   <div className="container mx-auto px-4">
