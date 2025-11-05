@@ -31,10 +31,10 @@ export default function Home() {
 
   <div className="relative z-10 text-center px-4 max-w-6xl mx-auto py-20">
     <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
-      Expert Floodplain Management and CRS Solutions
+      Your Guide to a More Resilient Community
     </h1>
     <p className="text-xl md:text-2xl text-blue-100 mb-8 drop-shadow font-light">
-      Expert Floodplain Management and CRS Solutions
+      Expert consulting and management for your community's CRS Program, Floodplain Management needs, and flood code compliance. Providing education and resources to elevate all communities.
     </p>
 
     <Button asChild size="lg" className="bg-white text-[hsl(var(--ocean-blue))] hover:bg-blue-50">
