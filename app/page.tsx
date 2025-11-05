@@ -27,11 +27,11 @@ export default function Home() {
   <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70" />
 
   <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto py-20">
-    <p className="text-3xl md:text-5xl mb-3 text-white italic font-light drop-shadow-lg leading-relaxed">
-      "Though flood waters threaten,<br />they will never reach them"
-    </p>
-    <p className="text-xl md:text-2xl text-blue-100 mb-16 drop-shadow">
-      — Psalm 32:6
+    <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
+      CoastalWide LLC
+    </h1>
+    <p className="text-xl md:text-2xl text-blue-100 mb-16 drop-shadow font-light">
+      Expert Floodplain Management and CRS Solutions
     </p>
 
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
@@ -123,6 +123,12 @@ export default function Home() {
               advance storm resiliency, improve CRS class rating and ensure NFIP compliance. Call, text or email us
               to discuss your community's floodplain management and CRS objectives.
             </p>
+            <blockquote className="border-l-4 border-[hsl(var(--ocean-blue))] pl-4 my-6 italic text-gray-600">
+              <p className="text-lg mb-2">
+                "Though flood waters threaten, they will never reach them"
+              </p>
+              <cite className="text-base not-italic">— Psalm 32:6</cite>
+            </blockquote>
             <Button asChild size="lg" className="bg-[hsl(var(--ocean-blue))] hover:bg-[hsl(var(--ocean-teal))]">
               <Link href="/about">
                 Learn more <ArrowRight className="ml-2 w-4 h-4" />
