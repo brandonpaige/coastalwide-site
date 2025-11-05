@@ -29,7 +29,7 @@ export default function Home() {
     style={{ backgroundColor: 'rgba(5, 61, 117, 0.33)' }}
   />
 
-  <div className="relative z-10 text-left px-4 max-w-md md:max-w-lg mx-auto py-20"> {/* Limited width, responsive */}
+  <div className="relative z-10 text-left px-4 max-w-6xl mx-auto py-20"> {/* Changed text-center to text-left */}
     <h1 className="text-2xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">
       Your Guide to a More Resilient Community
     </h1>
