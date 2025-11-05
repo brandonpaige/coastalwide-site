@@ -82,7 +82,7 @@ export default function Home() {
           <div className="relative h-80 rounded-lg overflow-hidden shadow-2xl">
             <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--ocean-blue))] to-[hsl(var(--ocean-teal))] opacity-20" />
             <img
-              src="/rolando-yera-CVrWChswu_w-unsplash.jpg"
+              src="/luiz-cent-xFSk-1py60Y-unsplash copy.jpg"
               alt="Coastal community aerial view"
               className="w-full h-full object-cover"
             />
