@@ -15,7 +15,7 @@ export default function Navigation() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/services", label: "Services", hasDropdown: true },
-    { href: "/resources", label: "Resources", hasDropdown: true }, // Enable dropdown for Resources
+    { href: "/resources", label: "Resources" },
     { href: "/podcast", label: "Podcast" },
     { href: "/contact", label: "Contact" },
   ];
