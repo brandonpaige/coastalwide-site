@@ -16,7 +16,7 @@ import {
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <section className="relative min-h-[700px] flex items-center justify-center overflow-hidden">
+     <section className="relative min-h-[700px] flex items-center justify-center overflow-hidden">
   <div
     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
     style={{
@@ -29,7 +29,7 @@ export default function Home() {
     style={{ backgroundColor: 'rgba(5, 61, 117, 0.33)' }}
   />
 
-  <div className="relative z-10 text-left px-4 max-w-6xl mx-auto py-20"> {/* Changed text-center to text-left */}
+  <div className="relative z-10 text-left px-4 max-w-md md:max-w-lg mx-auto py-20"> {/* Limited width, responsive */}
     <h1 className="text-2xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">
       Your Guide to a More Resilient Community
     </h1>
