@@ -24,43 +24,43 @@ export default function Home() {
     }}
   />
 
-  <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70" />
+  <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-white/50 to-white/70" />
 
-  <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto py-20">
-    <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
+  <div className="relative z-10 text-center px-4 max-w-6xl mx-auto py-20">
+    <h1 className="text-4xl md:text-6xl font-bold mb-4 text-[hsl(var(--ocean-blue))] drop-shadow-lg">
       CoastalWide LLC
     </h1>
-    <p className="text-xl md:text-2xl text-blue-100 mb-16 drop-shadow font-light">
+    <p className="text-xl md:text-2xl text-gray-700 mb-16 drop-shadow font-light">
       Expert Floodplain Management and CRS Solutions
     </p>
 
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
       <Link href="/services/crs" className="group">
-        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
-          <CardContent className="pt-4 pb-4 px-4 flex flex-col items-start text-left"> {/* Added text-left */}
-            <div className="mb-2">
-              <Shield className="w-8 h-8 text-white" />
+        <Card className="bg-transparent border border-gray-300 hover:border-[hsl(var(--ocean-blue))] transition-all duration-300 h-full">
+          <CardContent className="pt-8 pb-8 px-6">
+            <div className="mb-4">
+              <Shield className="w-8 h-8 text-[hsl(var(--ocean-blue))]" />
             </div>
-            <h3 className="text-sm font-bold text-white mb-1 text-left"> {/* Explicit text-left */}
+            <h3 className="text-lg font-bold text-gray-900 mb-2">
               CRS Program
             </h3>
-            <p className="text-sm text-gray-300 leading-tight text-left"> {/* Explicit text-left */}
-              Community Rating System consultation and class improvement.
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Community Rating System consultation and class improvement strategies.
             </p>
           </CardContent>
         </Card>
       </Link>
 
       <Link href="/services/floodplain-management" className="group">
-        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
-          <CardContent className="pt-4 pb-4 px-4 flex flex-col items-start text-left">
-            <div className="mb-2">
-              <MapPin className="w-8 h-8 text-white" />
+        <Card className="bg-transparent border border-gray-300 hover:border-[hsl(var(--ocean-blue))] transition-all duration-300 h-full">
+          <CardContent className="pt-8 pb-8 px-6">
+            <div className="mb-4">
+              <MapPin className="w-8 h-8 text-[hsl(var(--ocean-blue))]" />
             </div>
-            <h3 className="text-sm font-bold text-white mb-1 text-left">
+            <h3 className="text-lg font-bold text-gray-900 mb-2">
               Floodplain Management
             </h3>
-            <p className="text-sm text-gray-300 leading-tight text-left">
+            <p className="text-sm text-gray-600 leading-relaxed">
               Elevation certificates, NFIP compliance, and building code reviews.
             </p>
           </CardContent>
@@ -68,15 +68,15 @@ export default function Home() {
       </Link>
 
       <Link href="/services/education" className="group">
-        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
-          <CardContent className="pt-4 pb-4 px-4 flex flex-col items-start text-left">
-            <div className="mb-2">
-              <GraduationCap className="w-8 h-8 text-white" />
+        <Card className="bg-transparent border border-gray-300 hover:border-[hsl(var(--ocean-blue))] transition-all duration-300 h-full">
+          <CardContent className="pt-8 pb-8 px-6">
+            <div className="mb-4">
+              <GraduationCap className="w-8 h-8 text-[hsl(var(--ocean-blue))]" />
             </div>
-            <h3 className="text-sm font-bold text-white mb-1 text-left">
+            <h3 className="text-lg font-bold text-gray-900 mb-2">
               Education
             </h3>
-            <p className="text-sm text-gray-300 leading-tight text-left">
+            <p className="text-sm text-gray-600 leading-relaxed">
               Workshops and training for communities, professionals, and stakeholders.
             </p>
           </CardContent>
@@ -84,15 +84,15 @@ export default function Home() {
       </Link>
 
       <Link href="/resources" className="group">
-        <Card className="bg-transparent border border-white/30 hover:border-white/60 transition-all duration-300 h-full">
-          <CardContent className="pt-4 pb-4 px-4 flex flex-col items-start text-left">
-            <div className="mb-2">
-              <BookOpen className="w-8 h-8 text-white" />
+        <Card className="bg-transparent border border-gray-300 hover:border-[hsl(var(--ocean-blue))] transition-all duration-300 h-full">
+          <CardContent className="pt-8 pb-8 px-6">
+            <div className="mb-4">
+              <BookOpen className="w-8 h-8 text-[hsl(var(--ocean-blue))]" />
             </div>
-            <h3 className="text-lg font-bold text-white mb-1 text-left">
+            <h3 className="text-lg font-bold text-gray-900 mb-2">
               Resources
             </h3>
-            <p className="text-sm text-gray-300 leading-tight text-left">
+            <p className="text-sm text-gray-600 leading-relaxed">
               Flood insurance quoting, CRS resources, and FEMA guidance.
             </p>
           </CardContent>
