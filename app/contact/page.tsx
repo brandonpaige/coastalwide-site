@@ -98,10 +98,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-lg mb-1 text-gray-900">Email</h3>
                       <a
-                        href="mailto:dennis@coastalwide.com"
+                        href="mailto:denise@coastalwide.com"
                         className="text-[hsl(var(--ocean-blue))] hover:text-[hsl(var(--ocean-teal))] transition-colors break-all"
                       >
-                        dennis@coastalwide.com
+                        denise@coastalwide.com
                       </a>
                     </div>
                   </div>
