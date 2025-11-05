@@ -16,7 +16,7 @@ import {
 export default function Home() {
   return (
     <div className="min-h-screen">
-<section className="relative min-h-[700px] flex items-center justify-center overflow-hidden">
+<section className="relative min-h-[700px] flex items-center overflow-hidden">
   <div
     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
     style={{
@@ -24,24 +24,23 @@ export default function Home() {
     }}
   />
 
-  <div
-    className="absolute inset-0"
-    style={{ backgroundColor: 'rgba(5, 61, 117, 0.33)' }}
-  />
+  <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-blue-900/60 to-blue-900/70" />
 
-  <div className="relative z-10 text-left px-4 max-w-md md:max-w-lg py-20 ml-auto md:ml-0"> {/* Adjusted margin */}
-    <h1 className="text-2xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">
-      Your Guide to a More Resilient Community
-    </h1>
-    <p className="text-base md:text-lg text-blue-100 mb-8 drop-shadow font-light">
-      Expert consulting and management for your community's CRS Program, Floodplain Management needs, and flood code compliance. Providing education and resources to elevate all communities.
-    </p>
+  <div className="container mx-auto px-4">
+    <div className="relative z-10 text-left max-w-2xl py-20">
+      <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
+        CoastalWide LLC
+      </h1>
+      <p className="text-xl md:text-2xl text-blue-100 mb-8 drop-shadow font-light">
+        Expert Floodplain Management and CRS Solutions
+      </p>
 
-    <Button asChild size="lg" className="bg-white text-[hsl(var(--ocean-blue))] hover:bg-blue-50">
-      <Link href="/services">
-        Our Services <ArrowRight className="ml-2 w-4 h-4" />
-      </Link>
-    </Button>
+      <Button asChild size="lg" className="bg-white text-[hsl(var(--ocean-blue))] hover:bg-blue-50">
+        <Link href="/services">
+          Our Services <ArrowRight className="ml-2 w-4 h-4" />
+        </Link>
+      </Button>
+    </div>
   </div>
 
   <div className="absolute bottom-0 left-0 w-full">
