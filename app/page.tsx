@@ -31,7 +31,7 @@ export default function Home() {
 
   <div className="container mx-auto px-4">
     <div className="relative z-10 text-left max-w-2xl py-20">
-      <h1 className="text-2xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">
+      <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
       Your Guide to a More Resilient Community
     </h1>
     <p className="text-base md:text-lg text-blue-100 mb-8 drop-shadow font-light">
