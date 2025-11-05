@@ -41,7 +41,7 @@ export default function Home() {
             <div className="mb-2">
               <Shield className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-lg font-bold text-white mb-1 text-left"> {/* Explicit text-left */}
+            <h3 className="text-sm font-bold text-white mb-1 text-left"> {/* Explicit text-left */}
               CRS Program
             </h3>
             <p className="text-sm text-gray-300 leading-tight text-left"> {/* Explicit text-left */}
@@ -57,7 +57,7 @@ export default function Home() {
             <div className="mb-2">
               <MapPin className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-lg font-bold text-white mb-1 text-left">
+            <h3 className="text-sm font-bold text-white mb-1 text-left">
               Floodplain Management
             </h3>
             <p className="text-sm text-gray-300 leading-tight text-left">
@@ -73,7 +73,7 @@ export default function Home() {
             <div className="mb-2">
               <GraduationCap className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-lg font-bold text-white mb-1 text-left">
+            <h3 className="text-sm font-bold text-white mb-1 text-left">
               Education
             </h3>
             <p className="text-sm text-gray-300 leading-tight text-left">
