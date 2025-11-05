@@ -49,7 +49,7 @@ export default function FloodplainManagementPage() {
           <div>
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
               <img
-                src="https://images.pexels.com/photos/2101137/pexels-photo-2101137.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src="/Building-Plans-jpg.png"
                 alt="Floodplain management services"
                 className="w-full h-full object-cover"
               />
