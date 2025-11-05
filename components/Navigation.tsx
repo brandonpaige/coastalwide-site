@@ -132,6 +132,12 @@ export default function Navigation() {
                     </div>
                   )}
                 </div>
+              ) : link.href === "/contact" ? (
+                <Link key={link.href} href={link.href}>
+                  <Button className="bg-[hsl(var(--ocean-blue))] hover:bg-[hsl(var(--ocean-teal))] text-white">
+                    {link.label}
+                  </Button>
+                </Link>
               ) : (
                 <Link
                   key={link.href}
@@ -209,6 +215,16 @@ export default function Navigation() {
                     </div>
                   )}
                 </div>
+              ) : link.href === "/contact" ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Button className="w-full bg-[hsl(var(--ocean-blue))] hover:bg-[hsl(var(--ocean-teal))] text-white">
+                    {link.label}
+                  </Button>
+                </Link>
               ) : (
                 <Link
                   key={link.href}
