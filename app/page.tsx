@@ -31,7 +31,7 @@ export default function Home() {
 
   <div className="relative z-10 text-center px-4 max-w-6xl mx-auto py-20">
     <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
-      CoastalWide LLC
+      Expert Floodplain Management and CRS Solutions
     </h1>
     <p className="text-xl md:text-2xl text-blue-100 mb-8 drop-shadow font-light">
       Expert Floodplain Management and CRS Solutions
