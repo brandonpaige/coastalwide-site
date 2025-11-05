@@ -26,7 +26,7 @@ export default function Home() {
 
   <div
   className="absolute inset-0"
-  style={{ backgroundColor: 'rgba(5, 61, 117, 0.44)' }}
+  style={{ backgroundColor: 'rgba(5, 61, 117, 0.65)' }}
 />
 
   <div className="relative z-10 text-center px-4 max-w-6xl mx-auto py-20">
