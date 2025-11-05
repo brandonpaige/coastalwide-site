@@ -77,7 +77,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-sm hover:text-white transition-colors block"
               >
-                Twitter
+                X
               </a>
               <a
                 href="https://linkedin.com"
