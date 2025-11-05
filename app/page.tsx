@@ -25,15 +25,15 @@ export default function Home() {
   />
 
   <div
-  className="absolute inset-0"
-  style={{ backgroundColor: 'rgba(5, 61, 117, 0.33)' }}
-/>
+    className="absolute inset-0"
+    style={{ backgroundColor: 'rgba(5, 61, 117, 0.33)' }}
+  />
 
-  <div className="relative z-10 text-center px-4 max-w-6xl mx-auto py-20">
-    <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
+  <div className="relative z-10 text-left px-4 max-w-6xl mx-auto py-20"> {/* Changed text-center to text-left */}
+    <h1 className="text-2xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">
       Your Guide to a More Resilient Community
     </h1>
-    <p className="text-xl md:text-2xl text-blue-100 mb-8 drop-shadow font-light">
+    <p className="text-base md:text-lg text-blue-100 mb-8 drop-shadow font-light">
       Expert consulting and management for your community's CRS Program, Floodplain Management needs, and flood code compliance. Providing education and resources to elevate all communities.
     </p>
 
