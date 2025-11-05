@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, MapPin, GraduationCap } from "lucide-react";
+import { Shield, Waves, Presentation } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
@@ -54,7 +54,7 @@ export default function ServicesPage() {
               <CardContent className="pt-8">
                 <div className="mb-6 flex justify-center">
                   <div className="w-24 h-24 bg-[hsl(var(--ocean-light))] rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-[hsl(var(--ocean-blue))] group-hover:scale-110">
-                    <MapPin className="w-12 h-12 text-[hsl(var(--ocean-blue))] transition-colors duration-300 group-hover:text-white" />
+                    <Waves className="w-12 h-12 text-[hsl(var(--ocean-blue))] transition-colors duration-300 group-hover:text-white" />
                   </div>
                 </div>
                 <h2 className="text-3xl font-bold mb-6 text-center text-[hsl(var(--ocean-blue))] transition-colors duration-300 group-hover:text-[hsl(var(--ocean-blue))]">
@@ -72,7 +72,7 @@ export default function ServicesPage() {
               <CardContent className="pt-8">
                 <div className="mb-6 flex justify-center">
                   <div className="w-24 h-24 bg-[hsl(var(--ocean-light))] rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-[hsl(var(--ocean-teal))] group-hover:scale-110">
-                    <GraduationCap className="w-12 h-12 text-[hsl(var(--ocean-blue))] transition-colors duration-300 group-hover:text-white" />
+                    <Presentation className="w-12 h-12 text-[hsl(var(--ocean-blue))] transition-colors duration-300 group-hover:text-white" />
                   </div>
                 </div>
                 <h2 className="text-3xl font-bold mb-6 text-center text-[hsl(var(--ocean-blue))] transition-colors duration-300 group-hover:text-[hsl(var(--ocean-teal))]">Education</h2>

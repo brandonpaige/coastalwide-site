@@ -4,9 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import {
   ArrowRight,
   Shield,
-  MapPin,
   Waves,
-  GraduationCap,
+  Presentation,
   FileText,
   Users,
   TrendingUp,
@@ -138,7 +137,7 @@ export default function Home() {
             <CardContent className="pt-8">
               <div className="mb-6 flex justify-center">
                 <div className="w-20 h-20 bg-[hsl(var(--ocean-light))] rounded-full flex items-center justify-center">
-                  <MapPin className="w-10 h-10 text-[hsl(var(--ocean-blue))]" />
+                  <Waves className="w-10 h-10 text-[hsl(var(--ocean-blue))]" />
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4 text-center text-[hsl(var(--ocean-blue))]">
@@ -154,7 +153,7 @@ export default function Home() {
             <CardContent className="pt-8">
               <div className="mb-6 flex justify-center">
                 <div className="w-20 h-20 bg-[hsl(var(--ocean-light))] rounded-full flex items-center justify-center">
-                  <GraduationCap className="w-10 h-10 text-[hsl(var(--ocean-blue))]" />
+                  <Presentation className="w-10 h-10 text-[hsl(var(--ocean-blue))]" />
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4 text-center text-[hsl(var(--ocean-blue))]">Education</h3>

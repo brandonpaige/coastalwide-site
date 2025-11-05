@@ -25,7 +25,7 @@ export default function FloodplainManagementPage() {
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className="mb-6 flex justify-center">
             <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-              <MapPin className="w-16 h-16 text-white" />
+              <Waves className="w-16 h-16 text-white" />
             </div>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">Floodplain Management</h1>
