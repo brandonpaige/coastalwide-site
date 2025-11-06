@@ -8,6 +8,12 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -17,11 +23,86 @@ export default function ContactPage() {
     subject: "",
     message: "",
     consent: false,
+    honeypot: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.subject || !formData.message) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please fill in all required fields.",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (!formData.consent) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please agree to receive emails before submitting.",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const apiUrl = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/send-email`;
+
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          honeypot: formData.honeypot,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      setSubmitStatus({
+        type: "success",
+        message: "Thank you! Your message has been sent successfully. We'll get back to you soon.",
+      });
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        subject: "",
+        message: "",
+        consent: false,
+        honeypot: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus({
+        type: "error",
+        message: error instanceof Error ? error.message : "Failed to send message. Please try again or contact us directly.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -122,6 +203,19 @@ export default function ContactPage() {
             <Card className="border-2 border-gray-200 shadow-lg">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-[hsl(var(--ocean-blue))]">Send us a message</h3>
+
+                {submitStatus.type && (
+                  <div
+                    className={`p-4 rounded-md ${
+                      submitStatus.type === "success"
+                        ? "bg-green-50 border border-green-200 text-green-800"
+                        : "bg-red-50 border border-red-200 text-red-800"
+                    }`}
+                  >
+                    {submitStatus.message}
+                  </div>
+                )}
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
@@ -191,6 +285,16 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  <input
+                    type="text"
+                    name="website"
+                    value={formData.honeypot}
+                    onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })}
+                    style={{ display: "none" }}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+
                   <div className="flex items-start space-x-2">
                     <Checkbox
                       id="consent"
@@ -198,10 +302,11 @@ export default function ContactPage() {
                       onCheckedChange={(checked) =>
                         setFormData({ ...formData, consent: checked as boolean })
                       }
+                      required
                     />
                     <Label htmlFor="consent" className="text-sm text-gray-600 leading-tight cursor-pointer">
                       By checking this box and submitting your information, you are granting us permission to
-                      email you. You may unsubscribe at any time.
+                      email you. You may unsubscribe at any time. *
                     </Label>
                   </div>
 
@@ -209,8 +314,9 @@ export default function ContactPage() {
                     type="submit"
                     size="lg"
                     className="w-full bg-[hsl(var(--ocean-blue))] hover:bg-[hsl(var(--ocean-teal))]"
+                    disabled={isSubmitting}
                   >
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
