@@ -15,7 +15,7 @@ import {
 export default function Home() {
   return (
     <div className="min-h-screen">
-<section className="relative min-h-[700px] flex items-center overflow-hidden">
+<section className="relative min-h-[500px] flex items-center overflow-hidden">
   <div
     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
     style={{
