@@ -9,7 +9,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
-      <section className="relative h-56 flex items-center justify-center text-white">
+      <section className="relative h-80 flex items-center justify-center text-white">
         <div className="absolute inset-0">
           <img
             src="/image (4) copy.png"
