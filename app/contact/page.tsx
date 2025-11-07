@@ -8,12 +8,6 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
-import { createClient } from "@supabase/supabase-js";
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -23,86 +17,11 @@ export default function ContactPage() {
     subject: "",
     message: "",
     consent: false,
-    honeypot: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    type: "success" | "error" | null;
-    message: string;
-  }>({ type: null, message: "" });
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: "" });
-
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.subject || !formData.message) {
-      setSubmitStatus({
-        type: "error",
-        message: "Please fill in all required fields.",
-      });
-      setIsSubmitting(false);
-      return;
-    }
-
-    if (!formData.consent) {
-      setSubmitStatus({
-        type: "error",
-        message: "Please agree to receive emails before submitting.",
-      });
-      setIsSubmitting(false);
-      return;
-    }
-
-    try {
-      const apiUrl = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/send-email`;
-
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
-        },
-        body: JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          honeypot: formData.honeypot,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || "Failed to send message");
-      }
-
-      setSubmitStatus({
-        type: "success",
-        message: "Thank you! Your message has been sent successfully. We'll get back to you soon.",
-      });
-
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        subject: "",
-        message: "",
-        consent: false,
-        honeypot: "",
-      });
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      setSubmitStatus({
-        type: "error",
-        message: error instanceof Error ? error.message : "Failed to send message. Please try again or contact us directly.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    console.log("Form submitted:", formData);
   };
 
   return (
@@ -179,10 +98,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-lg mb-1 text-gray-900">Email</h3>
                       <a
-                        href="mailto:denise@coastalwide.com"
+                        href="mailto:dennis@coastalwide.com"
                         className="text-[hsl(var(--ocean-blue))] hover:text-[hsl(var(--ocean-teal))] transition-colors break-all"
                       >
-                        denise@coastalwide.com
+                        dennis@coastalwide.com
                       </a>
                     </div>
                   </div>
@@ -203,19 +122,6 @@ export default function ContactPage() {
             <Card className="border-2 border-gray-200 shadow-lg">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-[hsl(var(--ocean-blue))]">Send us a message</h3>
-
-                {submitStatus.type && (
-                  <div
-                    className={`p-4 rounded-md ${
-                      submitStatus.type === "success"
-                        ? "bg-green-50 border border-green-200 text-green-800"
-                        : "bg-red-50 border border-red-200 text-red-800"
-                    }`}
-                  >
-                    {submitStatus.message}
-                  </div>
-                )}
-
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
@@ -285,16 +191,6 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <input
-                    type="text"
-                    name="website"
-                    value={formData.honeypot}
-                    onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })}
-                    style={{ display: "none" }}
-                    tabIndex={-1}
-                    autoComplete="off"
-                  />
-
                   <div className="flex items-start space-x-2">
                     <Checkbox
                       id="consent"
@@ -302,11 +198,10 @@ export default function ContactPage() {
                       onCheckedChange={(checked) =>
                         setFormData({ ...formData, consent: checked as boolean })
                       }
-                      required
                     />
                     <Label htmlFor="consent" className="text-sm text-gray-600 leading-tight cursor-pointer">
                       By checking this box and submitting your information, you are granting us permission to
-                      email you. You may unsubscribe at any time. *
+                      email you. You may unsubscribe at any time.
                     </Label>
                   </div>
 
@@ -314,9 +209,8 @@ export default function ContactPage() {
                     type="submit"
                     size="lg"
                     className="w-full bg-[hsl(var(--ocean-blue))] hover:bg-[hsl(var(--ocean-teal))]"
-                    disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    Send Message
                   </Button>
                 </form>
               </CardContent>
@@ -325,7 +219,22 @@ export default function ContactPage() {
         </div>
       </section>
 
-      
+      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.5!2d-80.4!3d27.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDM5JzAwLjAiTiA4MMKwMjQnMDAuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="CoastalWide LLC Location"
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

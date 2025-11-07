@@ -26,8 +26,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-5 h-5 flex-shrink-0 text-[hsl(var(--ocean-teal))]" />
-                <a href="mailto:denise@coastalwide.com" className="text-sm hover:text-white transition-colors break-all">
-                  denise@coastalwide.com
+                <a href="mailto:dennis@coastalwide.com" className="text-sm hover:text-white transition-colors break-all">
+                  dennis@coastalwide.com
                 </a>
               </div>
             </div>
