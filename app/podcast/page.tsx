@@ -53,12 +53,13 @@ export default async function PodcastPage() {
     <main className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-[hsl(var(--ocean-blue))] rounded-full mb-6">
-            <Play className="w-8 h-8 text-white" fill="currentColor" />
+          <div className="flex justify-center mb-6">
+            <img
+              src="/FFMM_Logo1.svg"
+              alt="Florida Floodplain Management Matters"
+              className="h-32 w-auto"
+            />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            CoastalWide Podcast
-          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Expert insights on floodplain management, coastal resilience, and community rating systems
           </p>
