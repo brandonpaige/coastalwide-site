@@ -51,8 +51,16 @@ export default async function PodcastPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
+      <section className="relative h-96 flex items-center justify-center text-white">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.pexels.com/photos/7114755/pexels-photo-7114755.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Podcast recording"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative z-10 text-center px-4">
           <div className="flex justify-center mb-6">
             <img
               src="/FFMM_Logo1.svg"
@@ -60,10 +68,13 @@ export default async function PodcastPage() {
               className="h-32 w-auto"
             />
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto">
             Expert insights on floodplain management, coastal resilience, and community rating systems
           </p>
         </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
         {podcasts.length === 0 ? (
           <div className="text-center py-12">
