@@ -13,7 +13,7 @@ export default function CRSPage() {
       <section className="relative h-80 flex items-center justify-center text-white">
         <div className="absolute inset-0">
           <img
-            src="/image (4).png"
+            src="/ameer-basheer-euyV2Ae_KX0-unsplash-CROP.jpg"
             alt="Community aerial view"
             className="w-full h-full object-cover"
           />
