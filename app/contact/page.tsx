@@ -160,7 +160,7 @@ export default function ContactPage() {
                         href="mailto:dennis@coastalwide.com"
                         className="text-[hsl(var(--ocean-blue))] hover:text-[hsl(var(--ocean-teal))] transition-colors break-all"
                       >
-                        dennis@coastalwide.com
+                        denise@coastalwide.com
                       </a>
                     </div>
                   </div>
