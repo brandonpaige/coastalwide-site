@@ -65,7 +65,7 @@ export default async function PodcastPage() {
             <img
               src="/FFMM_Logo1.svg"
               alt="Florida Floodplain Management Matters"
-              className="h-32 w-auto"
+              className="h-40 w-auto"
             />
           </div>
           <p className="text-xl max-w-3xl mx-auto">
