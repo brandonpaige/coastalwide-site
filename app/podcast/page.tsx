@@ -54,7 +54,7 @@ export default async function PodcastPage() {
       <section className="relative h-96 flex items-center justify-center text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/7114755/pexels-photo-7114755.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="/FFMM-Cover.png"
             alt="Podcast recording"
             className="w-full h-full object-cover"
           />
